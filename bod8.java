@@ -1,0 +1,17 @@
+package lab8;
+
+import java.util.Scanner;
+
+public class bod8 {
+    public static void main(String[] args) {
+
+
+    int n,c=1;
+    Scanner sc=new Scanner(System.in);
+System.out.println("too oruul: ");
+    n=sc.nextInt();
+sc.close();
+for(int i=1;i<=n;i++)
+    {c=c*i;}
+     System.out.println("Factorial= "+c);}  }
+
