@@ -1,25 +1,25 @@
-package lab8;
-//100-150 тоонуудын цифрүүдийн нийлбэр нь тэгш байх тоонуудыг
-//нь гарга.
+package lab9;
+
+import java.util.Scanner;
 public class bod6 {
     public static void main(String[] args) {
-        int n=0, s = 0,i=100;
-        while(i>0) {
-            for (i=100; i < 150; i++) {
-                n = i % 10;
-                s = s + n;
-                i = i / 10;
-                if (s % 2 == 0) {
-                    System.out.println(s);
-                }
-
-            }
-        }
-            //if(s%2==0){
-
-
-
-            // }
-
-        }
+        Scanner scan = new Scanner(System.in);
+        int a[];
+        a=new int[10];
+        int max, min, s=0;
+        for(int i=0;i<10;i++)
+        {System.out.print((i+1)+"-r utga=");
+            a[i]=scan.nextInt();
+            s=s+a[i]; }
+        scan.close();
+        max=min=a[0];
+        for(int k=1; k<10;k++)
+        {if(max<a[k])
+            max=a[k];
+        else if(min>a[k])
+            min=a[k];}
+        System.out.print("\nNiilber= "+s);
+        System.out.print("\nMax= "+max);
+        System.out.print("\nMin= "+min);
     }
+}

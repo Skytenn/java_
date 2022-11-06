@@ -1,17 +1,27 @@
-package lab8;
+package lab9;
 
-import java.util.Random;
-//Санамсаргүй тоо сонгож аваад тэгш, сондгойг нь тодорхойлж
-//гарга.
+import java.util.Scanner;
+
 public class bod12 {
     public static void main(String[] args) {
-        Random a=new Random();
-        int r=a.nextInt(1000);
-        if(r % 2== 0){
-            System.out.println("Too tegsh: "+r);
+        int s=0,n,t,r;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Too oruulna uu: ");
+        n= sc.nextInt();
+        sc.close();
+        t=n;
+        while(n>0)
+        {
+            r=n%10;
+            s=(s*10)+r;
+            n/=10;
 
-    }
+        }
+        if(t==s)
+        {
+            System.out.println("Palindrom too mun: "+t);
+        }
         else
-            System.out.println("Too sondgoi: "+r);
+            System.out.println("Palindrome too bish.");
     }
 }

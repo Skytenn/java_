@@ -1,18 +1,17 @@
-package lab8;
-
+package lab9;
 import java.util.Scanner;
-// Өгөгдсөн бүхэл тоог эсрэгээр нь хөрвүүлж гарга.
 public class bod4 {
     public static void main(String[] args) {
-        int m, n, sum = 0;
-        Scanner s = new Scanner(System.in);
-        System.out.print("Too oruulna uu:");
-        m = s.nextInt();
-        while (m > 0) {
-            n = m % 10;
-            sum = sum * 10 + n;
-            m = m / 10;
-        }
-        System.out.println( sum);
-    }
-}
+        String str, st="";
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Temdegt muriig oruul ");
+        str=scan.nextLine();
+        scan.close();
+        int a=str.length();
+        if(a%2==0)
+        {for(int k=0;k<(a/2);k++)
+            st=st+str.charAt(k);
+            System.out.print("\n st = "+st);}
+        else
+            System.out.print("\n huvaah bolomjgui");
+    }}

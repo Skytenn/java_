@@ -1,25 +1,22 @@
-package lab8;
-//1-ээс N хүртэлх тоонуудаас анхны тоонуудыг нь олж гарга.
-public class bod7 {
-    public static void main(String[] args) {
-        int n=100;
-        int i =0;
-        int num =0;
+package lab9;
 
-        for (i = 1; i <=n; i++)
+import java.util.Scanner;
+
+public class bod7 {
+    public static void main(String arg[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Massiviin elementiin hemjeeg oruulna uu: ");
+        int n=sc.nextInt();
+
+        int a[]=new int[n];
+        System.out.println("Massiviin elementuudiig oruulna uu: ");
+        for(int i=0;i<n;i++)
         {
-            int counter=0;
-            for(num =i; num>=1; num--)
-            {
-                if(i%num==0)
-                {
-                    counter++;
-                }
-            }
-            if (counter ==2)
-            {
-                System.out.println(i);
-            }
+            a[i]=sc.nextInt();
         }
+
+        System.out.println("Masiiviin ehnii utga: "+a[0]);
+        System.out.println("massiviin suuliin utga: "+a[a.length-1]);
     }
 }
